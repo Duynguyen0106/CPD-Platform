@@ -1,0 +1,17 @@
+---
+description: Core project context and stack
+globs: **/*
+---
+# Project: Joint CPD Studio
+## Stack
+- Next.js 15 App Router (Server Components by default)
+- TypeScript (strict mode)
+- Supabase (PostgreSQL, Auth, RLS)
+- Stripe (Subscriptions & Connect for creator payouts)
+- shadcn/ui + Tailwind CSS
+
+## Core Domain Concepts
+- **User Roles:** `learner`, `creator` (a creator can also be a learner).
+- **Course:** Can be a `solo` course or a `joint` course (requires 2+ creators).
+- **GOsC Compliance:** Every course must track "Learning with Others" hours and produce a verifiable certificate.
+- **Marketplace:** Creators list courses; learners enroll. Platform takes a transaction fee.
